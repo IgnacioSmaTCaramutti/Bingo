@@ -37,3 +37,18 @@ def test_contar_celdas_ocupadas():
    )
    assert validar_quince_numeros(mi_carton) == True
 
+def test_celdas_menor_15():
+    mi_carton = carton()
+    contador = 0
+    for fila in mi_carton:
+        for celda in fila:
+            contador = contador + celda
+    assert contador >= 15
+
+def test_celdas_mayor_15():
+    mi_carton = carton()
+    contador = 0
+    for fila in mi_carton:
+        for celda in fila:
+            contador = contador + celda
+    assert contador <= 15
