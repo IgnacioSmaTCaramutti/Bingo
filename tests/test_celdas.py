@@ -12,7 +12,7 @@ def test_columnas(): #Verifica que no haya filas vacias
 
 		contador += 1
 
-	assert bandera_test == 0;
+	assert bandera == 0;
         
 
 def test_filas():#verifica que no haya filas vacias
@@ -26,4 +26,4 @@ def test_filas():#verifica que no haya filas vacias
 
 		contador += 1
 
-	assert bandera_filas == 0
+	assert bandera == 0

@@ -1,10 +1,10 @@
 def carton():
-	carton = (
+	mi_carton = (
                 (1,0,1,1,1,0,1,0,1),
 		(0,1,0,1,0,1,1,1,1),
 		(0,1,0,0,1,0,0,1,0)
 	)
-	return c
+	return mi_carton
 
 def columna(carton, nmro_columna):
 	return(
