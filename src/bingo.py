@@ -4,7 +4,7 @@ def carton():
 		(0,1,0,1,0,1,1,1,1),
 		(0,1,0,0,1,0,0,1,0)
 	)
-	return carton
+	return c
 
 def columna(carton, nmro_columna):
 	return(
