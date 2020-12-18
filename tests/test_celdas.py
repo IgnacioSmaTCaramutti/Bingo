@@ -33,12 +33,12 @@ def test_filas():#verifica que no haya filas vacias
 	assert bandera == 0
 
 def test_contar_celdas_ocupadas():
-       mi_carton = (
-       (1,0,1,0,0,1,0,1,1),
-       (1,1,0,1,1,0,1,0,1),
-       (1,0,0,0,1,0,0,1,1),
+    mi_carton = (
+            (1,0,1,0,0,1,0,1,1),
+            (1,1,0,1,1,0,1,0,1),
+            (1,0,0,0,1,0,0,1,1),
    )
-   assert validar_quince_numeros(mi_carton) == True
+    assert validar_quince_numeros(mi_carton) == True
 
 def test_celdas_menor_15():
     mi_carton = carton()
