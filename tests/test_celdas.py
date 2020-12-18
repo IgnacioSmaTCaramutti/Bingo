@@ -1,6 +1,9 @@
 from src.bingo import carton
 from src.bingo import columna
 from src.bingo import validar_quince_numeros
+from src.bingo import validar_no_menor_a_quince
+from src.bingo import validar_no_mayor_a_quince
+from src.bingo import validar_no_columnas_vacias
 
 def test_columnas(): #Verifica que no haya filas vacias
 	test_carton = carton()
