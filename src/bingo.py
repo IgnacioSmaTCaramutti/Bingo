@@ -105,3 +105,64 @@ def validar_repetidos(carton):
                 if elementos_carton.count(celda) != 1:
                     repetidos = False
     return repetidos
+
+def validar_cantidad_celdas_por_fila_ocupadas(carton):
+    bool_valido = True
+    contador = 5
+    for x in range(0,3):
+        if contador != 5:
+            bool_valido = False
+        contador = 0
+        for y in range(0,9):
+            if carton[x][y]!= 0:
+                contador = contador + 1
+    return bool_valido
+
+#no  me toma la "ñ" :c
+def validar_tamanio_carton(carton):
+    bool_valido = True
+    if len(carton) != 3:
+        bool_valido = False
+    else:
+        for x in range(0,3):
+            if len(carton[x]) != 9:
+                bool_valido = False
+    return bool_valido
+
+def validar_columnas_ocupadas(carton):
+    bool_valido = True
+    for x in range(0,9):
+        if (carton[0][x] == 0) and (carton[1][x] == 0) and (carton[2][x] == 0):
+            bool_valido = False
+    return bool_valido
+
+#¡¡¡pero qué nombre más largoooo!!!
+def validar_columnas_con_una_celda_ocupada(carton):
+    bool_valido = True
+    contador_columnas = 0
+    for y in range (0,9):
+        contador = 0
+        for x in range(0,3):
+            if carton[x][y] != 0:
+                contador = contador + 1
+        if contador == 1:
+            contador_columnas = contador_columnas + 1
+    if contador_columnas != 3:
+        bool_valido = False
+    return bool_valido
+
+def validar_celdas_vacias_consecutivas(carton):
+    bool_valido = True
+    for x in range (0,3):
+        for y in range (0,7):
+            if (carton[x][y] == 0) and (carton[x][y+1] == 0) and (carton[x][y+2] == 0):
+                bool_valido = False
+    return bool_valido
+#dice "validar" tal cosa, pero en realidad valida lo opuesto
+def validar_celdas_ocupadas_consecutivas(carton):
+    bool_valido = True
+    for x in range (0,3):
+        for y in range (0,7):
+            if (carton[x][y] != 0) and (carton[x][y+1] != 0) and (carton[x][y+2] != 0):
+                bool_valido = False
+    return bool_valido
