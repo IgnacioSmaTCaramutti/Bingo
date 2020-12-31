@@ -3,10 +3,10 @@ language:
 python:
   - "3.8"
 install:
-    pip install pytest pytest-cov coveralls
-
+    pip install pytest 
+    pip install pytest-cov
+    pip install coveralls
 script:
     pytest
  
-after_success:
-    coveralls
+after_success: coveralls
