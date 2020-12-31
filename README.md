@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/IgnacioSmaTCaramutti/Bingo.svg?branch=master)](https://travis-ci.org/IgnacioSmaTCaramutti/Bingo)
+[![Coverage Status](https://coveralls.io/repos/github/IgnacioSmaTCaramutti/Bingo/badge.svg?branch=master)](https://coveralls.io/github/IgnacioSmaTCaramutti/Bingo?branch=master)
+
 # Bienvenido
 
 En este proyecto se programa (en python) un carton aleatorio (y valido) del juego bingo. El programa cuenta con diferentes tests que verifican el correcto funcionamiento del programa.
