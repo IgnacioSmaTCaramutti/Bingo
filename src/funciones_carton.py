@@ -93,7 +93,7 @@ def imprimirCarton(carton):
     for fila in range(0,3):
         for columna in range(0,9):
             #print(" %2d ",carton[fila][columna])
-            print(carton[fila][columna], end = ' ')
+            print(carton[fila][columna], end == ' ')
         print("\n")
     print("\n")
 
@@ -111,21 +111,7 @@ def transformar_carton(carton):
 
 #Corre todos los tests en el carton que se le pase y devuelve True si pasa todos ellos de forma satisfactoria
 def tests_carton(carton_transformado):
-    if (validar_cantidad_numeros(carton_transformado) != True)
-    or ((validar_no_menor(carton_transformado) != True)
-    or (validar_no_mayor(carton_transformado) != True)
-    or (validar_no_columnas_vacias(carton_transformado) != True)
-    or (validar_no_filas_vacias(carton_transformado) != True)
-    or (validar_rango(carton_transformado) != True)
-    or (validar_numeros_filas(carton_transformado) != True)
-    or (validar_numeros_columnas(carton_transformado) != 15)
-    or (validar_repetidos(carton_transformado) != True)
-    or (validar_cantidad_celdas_por_fila_ocupadas(carton_transformado) != True)
-    or (validar_tamanio_carton(carton_transformado) != True)
-    or (validar_columnas_ocupadas(carton_transformado) != True)
-    or (validar_columnas_con_una_celda_ocupada(carton_transformado) != True)
-    or (validar_celdas_vacias_consecutivas(carton_transformado) != True)
-    or (validar_celdas_ocupadas_consecutivas(carton_transformado) != True):
+    if (validar_cantidad_numeros(carton_transformado) != True) or ((validar_no_menor(carton_transformado) != True) or (validar_no_mayor(carton_transformado) != True) or (validar_no_columnas_vacias(carton_transformado) != True) or (validar_no_filas_vacias(carton_transformado) != True) or (validar_rango(carton_transformado) != True) or (validar_numeros_filas(carton_transformado) != True) or (validar_numeros_columnas(carton_transformado) != 15) or (validar_repetidos(carton_transformado) != True) or (validar_cantidad_celdas_por_fila_ocupadas(carton_transformado) != True) or (validar_tamanio_carton(carton_transformado) != True) or (validar_columnas_ocupadas(carton_transformado) != True) or (validar_columnas_con_una_celda_ocupada(carton_transformado) != True) or (validar_celdas_vacias_consecutivas(carton_transformado) != True) or (validar_celdas_ocupadas_consecutivas(carton_transformado) != True):
         return False
     else:
         return True
