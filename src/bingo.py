@@ -89,3 +89,19 @@ def validar_numeros_columnas(carton):
                 if celda != 0:
                     celda_anterior = celda
     return celdas_validas
+
+def validar_repetidos(carton):
+    repetidos = True
+    elementos_carton = []
+    for columna in range(0,3):
+        for fila in range(0,9):
+            celda = carton[columna][fila]
+            if celda != 0:
+                elementos_carton.append(celda)
+    for columna in range (0,3):
+        for fila in range(0,9):
+            celda = carton[columna][fila]
+            if celda != 0:
+                if elementos_carton.count(celda) != 1:
+                    repetidos = False
+    return repetidos

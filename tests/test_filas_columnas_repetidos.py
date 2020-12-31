@@ -1,6 +1,7 @@
 from src.bingo import carton
 from src.bingo import validar_numeros_filas
 from src.bingo import validar_numeros_columnas
+from src.bingo import validar_repetidos
 
 def test_avance_filas():
     mi_carton = (
@@ -17,3 +18,11 @@ def test_avance_columnas():
        (80,30,25,0,70,0,90,0,0),
    )
     assert validar_numeros_columnas(mi_carton) == 15
+
+def test_repetidos():
+    mi_carton = (
+       (0,6,0,0,0,4,0,0,1),
+       (0,0,3,0,0,0,7,0,0),
+       (0,0,0,0,2,0,0,5,0),
+   )
+    assert validar_repetidos(mi_carton) == True 
