@@ -1,5 +1,4 @@
-#Los 0 representan celdas vacias en el carton.
-#Los 1 representan celdas ocupadas en el carton.
+
 def carton():
 	mi_carton = (
                 (1,0,1,1,1,0,1,0,1),
@@ -15,7 +14,7 @@ def columna(carton, nmro_columna):
 		carton[2][nmro_columna]
                 )
 
-def validar_quince_numeros(carton):
+def validar_cantidad_numeros(carton):
     celdas_vacias = 0
     for fila in carton:
         for celda in fila:
@@ -23,7 +22,7 @@ def validar_quince_numeros(carton):
                 celdas_vacias =  celdas_vacias + 1
     return celdas_vacias == 12
 
-def validar_no_menor_a_quince(carton):
+def validar_no_menor(carton):
     celdas_vacias = 0
     for fila in carton:
         for celda in fila:
@@ -31,14 +30,14 @@ def validar_no_menor_a_quince(carton):
                 celdas_vacias = celdas_vacias + 1
     return celdas_vacias <= 12
 
-def validar_no_mayor_a_quince(carton):
+def validar_no_mayor(carton):
     celdas_vacias = 0
     for fila in carton:
         for celda in fila:
             if celda == 0:
                 celdas_vacias = celdas_vacias + 1
     return celdas_vacias >= 12
-
+#No pueden haber columnas vacìas
 def validar_no_columnas_vacias(carton):
     columnas_no_vacias = 0
     for x in range(0,9):
@@ -46,7 +45,7 @@ def validar_no_columnas_vacias(carton):
             columnas_no_vacias = columnas_no_vacias + 1
     return columnas_no_vacias == 9
 
-#Valida que ninguna de las filas del carton esten absolutamente vacias
+#Las filas no pueden estar absolutamente vacìas
 def validar_no_filas_vacias(carton):
     filas_no_vacias = 0
     for x in range(0,3):
@@ -57,8 +56,8 @@ def validar_no_filas_vacias(carton):
             filas_no_vacias = filas_no_vacias + 1
     return filas_no_vacias == 3
 
-#Valida que los numeros del carton esten comprendidos entre 1 y 90
-def validar_uno_a_noventa(carton):
+#Los numeros deben estar comprendidos entre 1 y 90 (inclusive)
+def validar_rango(carton):
     casillas_validas = 0
     for fila in range(0,3):
         for columna in range(0,9):
@@ -66,3 +65,27 @@ def validar_uno_a_noventa(carton):
           if celda >= 0 and celda <=90:
               casillas_validas = casillas_validas + 1
     return casillas_validas == 27
+
+def validar_numeros_filas(carton):
+    celdas_validas = 0
+    for columna in range(0,3):
+        celda_anterior = -1
+        for fila in range(0,9):
+            celda = carton[columna][fila]
+            if celda > celda_anterior and celda != 0:
+                celdas_validas = celdas_validas + 1
+            if celda != 0:
+                celda_anterior = celda
+    return celdas_validas == 15
+
+def validar_numeros_columnas(carton):
+    celdas_validas = 0
+    for fila in range (0,9):
+        celda_anterior = -1
+        for columna in range(0,3):
+                celda = carton[columna][fila]
+                if celda > celda_anterior and celda != 0:
+                    celdas_validas = celdas_validas + 1
+                if celda != 0:
+                    celda_anterior = celda
+    return celdas_validas

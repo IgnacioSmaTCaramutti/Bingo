@@ -1,8 +1,8 @@
 from src.bingo import carton
 from src.bingo import columna
-from src.bingo import validar_quince_numeros
-from src.bingo import validar_no_menor_a_quince
-from src.bingo import validar_no_mayor_a_quince
+from src.bingo import validar_cantidad_numeros
+from src.bingo import validar_no_menor
+from src.bingo import validar_no_mayor
 from src.bingo import validar_no_columnas_vacias
 
 def test_columnas(): #Verifica que no haya filas vacias
@@ -38,7 +38,7 @@ def test_contar_celdas_ocupadas():
             (1,1,0,1,1,0,1,0,1),
             (1,0,0,0,1,0,0,1,1),
    )
-    assert validar_quince_numeros(mi_carton) == True
+    assert validar_cantidad_numeros(mi_carton) == True
 
 def test_celdas_menor_15():
     mi_carton = carton()
