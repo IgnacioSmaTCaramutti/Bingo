@@ -1,0 +1,9 @@
+<table>
+{% for y in range (0,3) %}
+    <tr>
+    {% for i in range (0,9) %}
+            <td> {{carton[y][i]}} </td>
+    {% endfor %}
+    </tr>
+{% endfor %}
+</table>
